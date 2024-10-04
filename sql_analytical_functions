@@ -1,0 +1,66 @@
+--Let's assume we have a table `sales` with the following schema:
+
+CREATE TABLE sales (
+    sale_id INT PRIMARY KEY,
+    product_id INT,
+    sale_date DATE,
+    sale_amount DECIMAL(10, 2),
+    salesperson_id INT
+);
+
+
+-- Sample Data:
+
+INSERT INTO sales (sale_id, product_id, sale_date, sale_amount, salesperson_id) VALUES
+(1, 101, '2023-01-01', 100.00, 1),
+(2, 102, '2023-01-02', 150.00, 2),
+(3, 101, '2023-01-03', 200.00, 1),
+(4, 103, '2023-01-04', 250.00, 3),
+(5, 102, '2023-01-05', 300.00, 2),
+(6, 101, '2023-01-06', 350.00, 1),
+(7, 103, '2023-01-07', 400.00, 3),
+(8, 102, '2023-01-08', 450.00, 2);
+
+-- 1. `RANK()`
+
+--The `RANK()` function assigns a rank to each row within a partition of a result set.
+
+SELECT
+    salesperson_id,
+    sale_date,
+    sale_amount,
+    RANK() OVER (PARTITION BY salesperson_id ORDER BY sale_amount DESC) AS rank
+FROM sales;
+
+-- 2. `LEAD()`
+
+--The `LEAD()` function provides access to a row at a specified physical offset following the current row.
+
+SELECT
+    sale_id,
+    sale_date,
+    sale_amount,
+    LEAD(sale_amount, 1) OVER (ORDER BY sale_date) AS next_sale_amount
+FROM sales;
+
+-- 3. `LAG()`
+
+-- The `LAG()` function provides access to a row at a specified physical offset before the current row.
+
+SELECT
+    sale_id,
+    sale_date,
+    sale_amount,
+    LAG(sale_amount, 1) OVER (ORDER BY sale_date) AS previous_sale_amount
+FROM sales;
+
+-- 4. `PARTITION BY`
+
+-- The `PARTITION BY` clause divides the result set into partitions to which the analytical function is applied.
+
+SELECT
+    product_id,
+    sale_date,
+    sale_amount,
+    SUM(sale_amount) OVER (PARTITION BY product_id ORDER BY sale_date) AS cumulative_sales
+FROM sales;
