@@ -1,4 +1,4 @@
-# GitHub Copilot SQL Procedures
+# GitHub Copilot SQL CTEs
 
 We will be using a public data set in BigQuery as our data source.
 
