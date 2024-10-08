@@ -3,9 +3,6 @@
 
 Let's assume we have a dataset of house prices with the following columns: house_id, num_rooms, num_bathrooms, square_feet, year_built, and price. Use Python with the pandas library.
 
-
-#Step-by-Step Plan:
-
 Step-by-Step Plan:
 - Load the dataset.
 - Handle missing values.
