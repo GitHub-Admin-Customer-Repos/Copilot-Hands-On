@@ -4,8 +4,6 @@
 Let's consider a more complex dataset, such as a dataset of customer transactions for an e-commerce platform. The dataset includes the following columns: customer_id, transaction_id, transaction_date, product_id, quantity, price, category, and payment_method.
 
 
-#Step-by-Step Plan:
-
 Step-by-Step Plan:
 - Load the dataset.
 - Handle missing values.
