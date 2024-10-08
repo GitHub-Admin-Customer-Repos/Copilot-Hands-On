@@ -16,4 +16,5 @@ View the README.md in each directory for lab specific directions.
 ## [SQL Procedures Lab](https://github.com/GitHub-Admin-Customer-Repos/Copilot-Hands-On/blob/main/sql_labs/sql_procedures.md)
 ## [SQL Optomization Lab](https://github.com/GitHub-Admin-Customer-Repos/Copilot-Hands-On/blob/main/sql_labs/sql_optimization.md)
 ## [SQL CTEs Lab](https://github.com/GitHub-Admin-Customer-Repos/Copilot-Hands-On/blob/main/sql_labs/sql_CTEs.md)
-## [SQL Analytical Functions Lab](https://github.com/GitHub-Admin-Customer-Repos/Copilot-Hands-On/blob/main/sql_labs/sql_analytical_functions.md)
+## [SQL Analytical Functions Lab](https://github.com/GitHub-Admin-Customer-Repos/Copilot-Hands-On/blob/main/sql_labs/
+## [SQL Analytical Functions Lab](https://github.com/GitHub-Admin-Customer-Repos/Copilot-Hands-On/blob/main/sql_dbt_unit_tests_labs/sql_analytical_functions.md)

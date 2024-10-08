@@ -1,4 +1,4 @@
-# GitHub Copilot Python Analytical Functions
+# GitHub Copilot SQL Analytical Functions
 
 We will be using a public data set in BigQuery as our data source.
 
